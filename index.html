@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Hotel Tabby — Boutique sul mare a Golfo Aranci, Sardegna</title>
+<meta name="description" content="Hotel Tabby: a due passi dal mare di Golfo Aranci, in Sardegna. Camere con terrazza vista mare, colazione affacciata sul golfo, gite in barca tra i delfini. Prenota diretto al miglior prezzo garantito." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">Tabby <small>Golfo Aranci</small></a>
+    <nav class="nav-desktop" aria-label="Navigazione principale">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="camere.html">Camere</a></li>
+        <li><a href="offerte.html">Offerte</a></li>
+        <li><a href="esperienze.html">Esperienze</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="call-pill" href="tel:+390789000000">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Chiama ora
+      </a>
+      <a class="icon-btn" href="camere.html#prenota" aria-label="Prenota">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Apri il menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky compact booking bar (desktop, appears on scroll) -->
+<div class="sticky-bar">
+  <div class="container sticky-bar-inner">
+    <div class="sticky-bar-info">
+      <strong>Hotel Tabby · Golfo Aranci</strong>
+      <span>Fronte spiaggia, dal 2003 — tariffa migliore garantita in diretta</span>
+    </div>
+    <form class="booking-grid" data-booking-form style="flex:1;max-width:640px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+      <div class="booking-field"><label for="sb-in">Check-in</label><input id="sb-in" type="date" data-checkin required /></div>
+      <div class="booking-field"><label for="sb-out">Check-out</label><input id="sb-out" type="date" data-checkout required /></div>
+      <div class="booking-field" data-guest-control>
+        <label>Ospiti</label>
+        <input type="hidden" value="2" />
+        <span data-guest-count>2 ospiti</span>
+      </div>
+      <button type="submit" class="btn btn-primary booking-submit">Verifica</button>
+    </form>
+  </div>
+</div>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="brand">Tabby <small>Golfo Aranci</small></a>
+    <button class="mobile-nav-close" aria-label="Chiudi il menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="camere.html">Camere</a></li>
+    <li><a href="offerte.html">Offerte</a></li>
+    <li><a href="esperienze.html">Esperienze</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+  <div class="mobile-nav-footer">
+    <a href="tel:+390789000000">+39 0789 000 000</a>
+    <a href="https://wa.me/390789000000" target="_blank" rel="noopener">WhatsApp: scrivici ora</a>
+    <a href="mailto:info@hoteltabby.it">info@hoteltabby.it</a>
+  </div>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-tag">Golfo Aranci · Sardegna, fronte mare</span>
+      <h1>Il tuo posto <em>sul mare</em>,<br />da sempre a Golfo Aranci</h1>
+      <p class="lead">Una piccola casa sul Golfo dal 2003, gestita dalla stessa famiglia. Terrazze affacciate sul blu, colazione con vista e il mare a due passi: il resto lo fa la Sardegna.</p>
+      <div class="hero-ctas">
+        <a href="camere.html#prenota" class="btn btn-primary">Verifica disponibilità</a>
+        <a href="#storia" class="btn btn-ghost">Scopri l'hotel</a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Miglior tariffa garantita in diretta</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> A 200 m dalla spiaggia</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Famiglia Tabby dal 2003</li>
+      </ul>
+    </div>
+
+    <div class="booking-widget">
+      <form class="booking-card" data-booking-form>
+        <div class="booking-grid">
+          <div class="booking-field">
+            <label for="in-date">Check-in</label>
+            <input id="in-date" type="date" data-checkin required />
+          </div>
+          <div class="booking-field">
+            <label for="out-date">Check-out</label>
+            <input id="out-date" type="date" data-checkout required />
+          </div>
+          <div class="booking-field" data-guest-control>
+            <label>Ospiti</label>
+            <input type="hidden" value="2" />
+            <span data-guest-count>2 ospiti</span>
+            <div style="display:flex;gap:6px;margin-top:2px;">
+              <button type="button" class="btn btn-outline btn-sm" data-guest-dec style="padding:2px 10px;">−</button>
+              <button type="button" class="btn btn-outline btn-sm" data-guest-inc style="padding:2px 10px;">+</button>
+            </div>
+          </div>
+          <div class="booking-field">
+            <label for="promo">Codice promo</label>
+            <input id="promo" type="text" placeholder="Facoltativo" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary booking-submit btn-block">Verifica disponibilità</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USP STRIP ============ -->
+<section class="usp-strip">
+  <div class="container">
+    <ul>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <div><h4>Prenotazione diretta</h4><p>Sempre il prezzo più basso, garantito</p></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M2 12a10 10 0 0 0 20 0"/></svg>
+        <div><h4>Fronte spiaggia</h4><p>200 metri dal mare di Golfo Aranci</p></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+        <div><h4>Gestione familiare</h4><p>Accoglienza autentica dal 2003</p></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+        <div><h4>Cancellazione flessibile</h4><p>Modifica gratuita fino a 3 giorni prima</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ ROOMS PREVIEW ============ -->
+<section class="section" id="camere">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Le camere</span>
+      <h2>Ogni finestra si apre sul Golfo</h2>
+      <p>Quattro tipologie di camera, tutte climatizzate, pensate per chi vuole svegliarsi con il mare come prima immagine della giornata.</p>
+    </div>
+
+    <div class="grid cols-3 reveal">
+      <article class="card">
+        <div class="card-media tone-sand"><span>Camera Classic</span></div>
+        <div class="card-body">
+          <h3>Camera Classic</h3>
+          <div class="card-meta">
+            <span>2 persone</span><span>·</span><span>18 m²</span><span>·</span><span>Bagno privato</span>
+          </div>
+          <p>Luminosa e essenziale, con aria condizionata, TV satellitare e frigobar. Ideale per un soggiorno breve o un weekend in coppia.</p>
+          <div class="card-footer">
+            <div class="price"><strong>da 89 €</strong><span>a notte, colazione inclusa</span></div>
+            <a href="camere.html#classic" class="btn btn-outline btn-sm">Dettagli</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media tone-terracotta"><span>Camera Vista Mare</span></div>
+        <div class="card-body">
+          <h3>Camera Vista Mare</h3>
+          <div class="card-meta">
+            <span>2-3 persone</span><span>·</span><span>20 m²</span><span>·</span><span>Vista Golfo</span>
+          </div>
+          <p>La stessa cura della Classic, con un'aggiunta preziosa: la vista sul Golfo di Arancio dalla finestra, perfetta al risveglio.</p>
+          <div class="card-footer">
+            <div class="price"><strong>da 109 €</strong><span>a notte, colazione inclusa</span></div>
+            <a href="camere.html#vista-mare" class="btn btn-outline btn-sm">Dettagli</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media"><span class="card-badge">La più richiesta</span><span>Camera con Terrazza</span></div>
+        <div class="card-body">
+          <h3>Camera con Terrazza</h3>
+          <div class="card-meta">
+            <span>2-4 persone</span><span>·</span><span>24 m²</span><span>·</span><span>Terrazza privata</span>
+          </div>
+          <p>Una terrazza arredata tutta per voi, affacciata sul Mediterraneo: la colazione all'alba qui è un'altra cosa.</p>
+          <div class="card-footer">
+            <div class="price"><strong>da 139 €</strong><span>a notte, colazione inclusa</span></div>
+            <a href="camere.html#terrazza" class="btn btn-outline btn-sm">Dettagli</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-cta">
+      <a href="camere.html" class="btn btn-dark">Vedi tutte le camere</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / STORIA ============ -->
+<section class="section section--sand" id="storia">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split-media"><span>Foto: la terrazza sul Golfo</span></div>
+      <div>
+        <span class="eyebrow">La nostra storia</span>
+        <h2>Una casa di famiglia, aperta sul mare dal 2003</h2>
+        <p>Gianluigi e Viviana hanno immaginato l'Hotel Tabby come un piccolo rifugio a pochi passi dal centro di Golfo Aranci: una casa vera, non un albergo anonimo, dove ogni ospite viene accolto per nome.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Colazione dolce e salata nella sala con vista mare</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bar interno, aperto anche la sera in estate</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Angolo palestra e sala massaggi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Navetta su richiesta da/per l'aeroporto di Olbia</li>
+        </ul>
+        <a href="esperienze.html" class="btn btn-outline">Scopri la struttura e i dintorni</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFERS TEASER ============ -->
+<section class="section" id="offerte">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Offerte</span>
+      <h2>Il vantaggio è sempre di chi prenota diretto</h2>
+      <p>Nessuna commissione nascosta, nessuna sorpresa: prenotando sul nostro sito hai sempre il prezzo migliore.</p>
+    </div>
+
+    <div class="grid cols-3 reveal">
+      <article class="card">
+        <div class="card-media tone-terracotta"><span class="card-badge">Best Rate</span><span>Tariffa migliore garantita</span></div>
+        <div class="card-body">
+          <h3>Miglior tariffa garantita</h3>
+          <p>Trovi lo stesso soggiorno più economico altrove? Ti rimborsiamo la differenza. Prenotare diretto conviene, sempre.</p>
+          <div class="card-footer"><a href="offerte.html#best-rate" class="btn btn-outline btn-sm">Scopri di più</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-media tone-sand"><span>Prenota prima</span></div>
+        <div class="card-body">
+          <h3>Prenota prima, risparmia il 15%</h3>
+          <p>Prenotando con almeno 60 giorni di anticipo ottieni il 15% di sconto sulla tariffa flessibile.</p>
+          <div class="card-footer"><a href="offerte.html#early-booking" class="btn btn-outline btn-sm">Scopri di più</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-media"><span>Famiglie</span></div>
+        <div class="card-body">
+          <h3>Pacchetto famiglia</h3>
+          <p>Terza e quarta persona gratuite fino a 12 anni nelle camere con terrazza. La Sardegna è più bella insieme.</p>
+          <div class="card-footer"><a href="offerte.html#famiglia" class="btn btn-outline btn-sm">Scopri di più</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-cta">
+      <a href="offerte.html" class="btn btn-dark">Vedi tutte le offerte</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCES ============ -->
+<section class="section section--sea">
+  <div class="container">
+    <div class="split reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--color-gold);">Esperienze</span>
+        <h2>Il Golfo è solo l'inizio</h2>
+        <p>Dai delfini che nuotano al largo alle spiagge bianche della Maddalena: organizziamo noi le vostre giornate in Sardegna, voi dovete solo scegliere il costume.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-gold);"><path d="M20 6 9 17l-5-5"/></svg> Uscite in barca per osservare i delfini</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-gold);"><path d="M20 6 9 17l-5-5"/></svg> Escursioni all'Arcipelago della Maddalena</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-gold);"><path d="M20 6 9 17l-5-5"/></svg> Passeggiata nel centro storico, 10 minuti a piedi</li>
+        </ul>
+        <a href="esperienze.html" class="btn btn-primary">Scopri le esperienze</a>
+      </div>
+      <div class="split-media reverse-order" style="background:linear-gradient(135deg,#2e5f73,#0f2530);"><span>Foto: gita in barca tra i delfini</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Chi è già stato qui</span>
+      <h2>Parola dei nostri ospiti</h2>
+    </div>
+    <div class="testimonials reveal">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Terrazza con vista mozzafiato e colazione ottima. Gianluigi ci ha consigliato l'uscita in barca coi delfini: indimenticabile."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div><strong>Marta R.</strong><span>Milano</span></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"A due minuti dalla spiaggia, personale gentilissimo, ci siamo sentiti a casa dal primo minuto. Torneremo sicuramente."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">L</div>
+          <div><strong>Laurent D.</strong><span>Lione, Francia</span></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Piccolo hotel di famiglia con un'accoglienza vera. Camera vista mare fantastica, rapporto qualità prezzo imbattibile."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div><strong>Sara & Marco</strong><span>Torino</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section--tight">
+  <div class="cta-banner reveal">
+    <h2>Pronti per il vostro Golfo?</h2>
+    <p>Le camere migliori si esauriscono prima, soprattutto in alta stagione. Bloccate le vostre date al prezzo più basso, garantito.</p>
+    <div class="cta-banner-actions">
+      <a href="camere.html#prenota" class="btn btn-dark">Prenota ora</a>
+      <a href="https://wa.me/390789000000" target="_blank" rel="noopener" class="btn btn-ghost">Scrivici su WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">Tabby <small>Golfo Aranci</small></a>
+        <p style="max-width:280px;">Via Vasco De Gama, 8 — 07020 Golfo Aranci (OT), Sardegna. A due passi dal mare dal 2003.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/hoteltabby/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.facebook.com/hoteltabbygolfoaranci/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Esplora</h5>
+        <ul>
+          <li><a href="camere.html">Camere</a></li>
+          <li><a href="offerte.html">Offerte</a></li>
+          <li><a href="esperienze.html">Esperienze</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Informazioni</h5>
+        <ul>
+          <li><a href="contatti.html">Come raggiungerci</a></li>
+          <li><a href="offerte.html#best-rate">Miglior tariffa garantita</a></li>
+          <li><a href="contatti.html#faq">Domande frequenti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contatti</h5>
+        <ul>
+          <li><a href="tel:+390789000000">+39 0789 000 000</a></li>
+          <li><a href="mailto:info@hoteltabby.it">info@hoteltabby.it</a></li>
+          <li><a href="https://wa.me/390789000000" target="_blank" rel="noopener">WhatsApp diretto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Hotel Tabby — Golfo Aranci, Sardegna. Tutti i diritti riservati.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile persistent CTA -->
+<div class="mobile-cta">
+  <a href="tel:+390789000000" class="btn btn-outline"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Chiama</a>
+  <a href="camere.html#prenota" class="btn btn-primary">Prenota ora</a>
+</div>
+
+<!-- Floating WhatsApp contact -->
+<div class="floating-contact">
+  <div class="floating-contact-panel">
+    <a href="https://wa.me/390789000000" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.13-4.86-4.32-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.21.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
+      Scrivici su WhatsApp
+    </a>
+    <a href="tel:+390789000000">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Chiama la reception
+    </a>
+    <a href="contatti.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Scrivici in 1 minuto
+    </a>
+  </div>
+  <button class="floating-contact-btn" aria-label="Apri i contatti rapidi">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.13-4.86-4.32-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.21.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
+  </button>
+</div>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
