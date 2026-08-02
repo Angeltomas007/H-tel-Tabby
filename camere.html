@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Camere — Hotel Tabby, Golfo Aranci</title>
-<meta name="description" content="Scopri le camere dell'Hotel Tabby a Golfo Aranci: Classic, Vista Mare, Terrazza e Famiglia. Tutte climatizzate, a due passi dal mare. Prenota diretto al miglior prezzo." />
+<title data-i18n="meta.rooms.title">Camere — Hotel Tabby, Golfo Aranci</title>
+<meta name="description" data-i18n-content="meta.rooms.description" content="Scopri le camere dell'Hotel Tabby a Golfo Aranci: Classic, Vista Mare, Terrazza e Famiglia. Tutte climatizzate, a due passi dal mare. Prenota diretto al miglior prezzo." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>" />
-<link rel="stylesheet" href="assets/css/style.css?v=3" />
+<link rel="stylesheet" href="assets/css/style.css?v=4" />
 </head>
 <body>
 
@@ -15,22 +15,29 @@
     <a href="index.html" class="brand">Tabby <small>Golfo Aranci</small></a>
     <nav class="nav-desktop" aria-label="Navigazione principale">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="camere.html" class="is-active">Camere</a></li>
-        <li><a href="offerte.html">Offerte</a></li>
-        <li><a href="esperienze.html">Esperienze</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="camere.html" class="is-active" data-i18n="nav.rooms">Camere</a></li>
+        <li><a href="offerte.html" data-i18n="nav.offers">Offerte</a></li>
+        <li><a href="esperienze.html" data-i18n="nav.experiences">Esperienze</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
     <div class="header-actions">
+      <select class="lang-switch" data-lang-switch aria-label="Lingua / Language / Langue / Sprache / Idioma">
+        <option value="it">IT</option>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+        <option value="es">ES</option>
+      </select>
       <a class="call-pill" href="tel:+390789000000">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Chiama ora
+        <span data-i18n="header.callNow">Chiama ora</span>
       </a>
-      <a class="icon-btn" href="#prenota" aria-label="Prenota">
+      <a class="icon-btn" href="#prenota" aria-label="Prenota" data-i18n-aria="header.bookAria">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       </a>
-      <button class="nav-toggle" aria-label="Apri il menu">
+      <button class="nav-toggle" aria-label="Apri il menu" data-i18n-aria="header.menuAria">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
@@ -41,17 +48,17 @@
   <div class="container sticky-bar-inner">
     <div class="sticky-bar-info">
       <strong>Hotel Tabby · Golfo Aranci</strong>
-      <span>Fronte spiaggia, dal 2003 — tariffa migliore garantita in diretta</span>
+      <span data-i18n="stickyBar.tagline">Fronte spiaggia, dal 2003 — tariffa migliore garantita in diretta</span>
     </div>
     <form class="booking-grid" data-booking-form style="flex:1;max-width:640px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-      <div class="booking-field"><label for="sb-in">Check-in</label><input id="sb-in" type="date" data-checkin required /></div>
-      <div class="booking-field"><label for="sb-out">Check-out</label><input id="sb-out" type="date" data-checkout required /></div>
+      <div class="booking-field"><label for="sb-in" data-i18n="booking.checkin">Check-in</label><input id="sb-in" type="date" data-checkin required /></div>
+      <div class="booking-field"><label for="sb-out" data-i18n="booking.checkout">Check-out</label><input id="sb-out" type="date" data-checkout required /></div>
       <div class="booking-field" data-guest-control>
-        <label>Ospiti</label>
+        <label data-i18n="booking.guests">Ospiti</label>
         <input type="hidden" value="2" />
         <span data-guest-count>2 ospiti</span>
       </div>
-      <button type="submit" class="btn btn-primary booking-submit">Verifica</button>
+      <button type="submit" class="btn btn-primary booking-submit" data-i18n="booking.verify">Verifica</button>
     </form>
   </div>
 </div>
@@ -59,20 +66,27 @@
 <div class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav-top">
     <a href="index.html" class="brand">Tabby <small>Golfo Aranci</small></a>
-    <button class="mobile-nav-close" aria-label="Chiudi il menu">
+    <button class="mobile-nav-close" aria-label="Chiudi il menu" data-i18n-aria="header.closeMenuAria">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
   </div>
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="camere.html">Camere</a></li>
-    <li><a href="offerte.html">Offerte</a></li>
-    <li><a href="esperienze.html">Esperienze</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="camere.html" data-i18n="nav.rooms">Camere</a></li>
+    <li><a href="offerte.html" data-i18n="nav.offers">Offerte</a></li>
+    <li><a href="esperienze.html" data-i18n="nav.experiences">Esperienze</a></li>
+    <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
   </ul>
   <div class="mobile-nav-footer">
+    <select class="lang-switch" data-lang-switch aria-label="Lingua / Language / Langue / Sprache / Idioma">
+      <option value="it">Italiano</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+    </select>
     <a href="tel:+390789000000">+39 0789 000 000</a>
-    <a href="https://wa.me/390789000000" target="_blank" rel="noopener">WhatsApp: scrivici ora</a>
+    <a href="https://wa.me/390789000000" target="_blank" rel="noopener" data-i18n="mobileNav.whatsapp">WhatsApp: scrivici ora</a>
     <a href="mailto:info@hoteltabby.it">info@hoteltabby.it</a>
   </div>
 </div>
@@ -80,9 +94,9 @@
 <main>
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Camere</div>
-    <h1>Camere affacciate sul Golfo</h1>
-    <p class="lead">Quattro tipologie, un solo denominatore comune: il mare a un passo dalla finestra. Scegli la vostra e verificate subito la disponibilità.</p>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.rooms">Camere</span></div>
+    <h1 data-i18n="rooms.page.title">Camere affacciate sul Golfo</h1>
+    <p class="lead" data-i18n="rooms.page.lead">Quattro tipologie, un solo denominatore comune: il mare a un passo dalla finestra. Scegli la vostra e verificate subito la disponibilità.</p>
   </div>
 </section>
 
@@ -92,15 +106,15 @@
     <form class="booking-card" data-booking-form>
       <div class="booking-grid">
         <div class="booking-field">
-          <label for="in-date">Check-in</label>
+          <label for="in-date" data-i18n="booking.checkin">Check-in</label>
           <input id="in-date" type="date" data-checkin required />
         </div>
         <div class="booking-field">
-          <label for="out-date">Check-out</label>
+          <label for="out-date" data-i18n="booking.checkout">Check-out</label>
           <input id="out-date" type="date" data-checkout required />
         </div>
         <div class="booking-field" data-guest-control>
-          <label>Ospiti</label>
+          <label data-i18n="booking.guests">Ospiti</label>
           <input type="hidden" value="2" />
           <span data-guest-count>2 ospiti</span>
           <div style="display:flex;gap:6px;margin-top:2px;">
@@ -109,11 +123,11 @@
           </div>
         </div>
         <div class="booking-field">
-          <label for="promo">Codice promo</label>
-          <input id="promo" type="text" placeholder="Facoltativo" />
+          <label for="promo" data-i18n="booking.promo">Codice promo</label>
+          <input id="promo" type="text" placeholder="Facoltativo" data-i18n-placeholder="booking.promoPlaceholder" />
         </div>
       </div>
-      <button type="submit" class="btn btn-primary booking-submit btn-block">Verifica disponibilità</button>
+      <button type="submit" class="btn btn-primary booking-submit btn-block" data-i18n="booking.checkAvailability">Verifica disponibilità</button>
     </form>
   </div>
 </section>
@@ -122,20 +136,20 @@
 <section class="section" id="classic">
   <div class="container">
     <div class="split reveal">
-      <div class="split-media"><span>Foto: Camera Classic</span></div>
+      <div class="split-media"><span data-i18n="rooms.classic.photoLabel">Foto: Camera Classic</span></div>
       <div>
-        <span class="eyebrow">Camera Classic</span>
-        <h2>Semplice, luminosa, essenziale</h2>
-        <p>La soluzione ideale per chi cerca comfort senza fronzoli: uno spazio curato, silenzioso, a pochi passi dalla hall e dalla sala colazione.</p>
+        <span class="eyebrow" data-i18n="room.classic.name">Camera Classic</span>
+        <h2 data-i18n="rooms.classic.title">Semplice, luminosa, essenziale</h2>
+        <p data-i18n="rooms.classic.desc">La soluzione ideale per chi cerca comfort senza fronzoli: uno spazio curato, silenzioso, a pochi passi dalla hall e dalla sala colazione.</p>
         <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 18 m² · fino a 2 persone</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Aria condizionata, TV satellitare, frigobar</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bagno privato con asciugacapelli e set cortesia</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Wi-Fi gratuito in tutta la struttura</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.classic.feat1">18 m² · fino a 2 persone</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.feat.amenities">Aria condizionata, TV satellitare, frigobar</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.classic.feat3">Bagno privato con asciugacapelli e set cortesia</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.feat.wifi">Wi-Fi gratuito in tutta la struttura</span></li>
         </ul>
         <div class="card-footer" style="padding-top:0;">
-          <div class="price"><strong>da 89 €</strong><span>a notte, colazione inclusa</span></div>
-          <a href="#prenota" class="btn btn-primary">Prenota questa camera</a>
+          <div class="price"><strong data-i18n="room.classic.price">da 89 €</strong><span data-i18n="room.priceNote">a notte, colazione inclusa</span></div>
+          <a href="#prenota" class="btn btn-primary" data-i18n="rooms.bookThisRoom">Prenota questa camera</a>
         </div>
       </div>
     </div>
@@ -145,20 +159,20 @@
 <section class="section section--sand" id="vista-mare">
   <div class="container">
     <div class="split reveal">
-      <div class="split-media reverse-order" style="background:linear-gradient(135deg,#3e7a8c,#12313f);"><span>Foto: Camera Vista Mare</span></div>
+      <div class="split-media reverse-order" style="background:linear-gradient(135deg,#3e7a8c,#12313f);"><span data-i18n="rooms.seaview.photoLabel">Foto: Camera Vista Mare</span></div>
       <div>
-        <span class="eyebrow">Camera Vista Mare</span>
-        <h2>Il Golfo, ogni mattina dalla finestra</h2>
-        <p>Stesso comfort della Classic, con in più il regalo più bello: aprire la finestra e vedere il blu del Golfo di Arancio.</p>
+        <span class="eyebrow" data-i18n="room.seaview.name">Camera Vista Mare</span>
+        <h2 data-i18n="rooms.seaview.title">Il Golfo, ogni mattina dalla finestra</h2>
+        <p data-i18n="rooms.seaview.desc">Stesso comfort della Classic, con in più il regalo più bello: aprire la finestra e vedere il blu del Golfo di Arancio.</p>
         <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 20 m² · fino a 3 persone</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Vista mare diretta</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Aria condizionata, TV satellitare, frigobar</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Wi-Fi gratuito in tutta la struttura</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.seaview.feat1">20 m² · fino a 3 persone</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.seaview.feat2">Vista mare diretta</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.feat.amenities">Aria condizionata, TV satellitare, frigobar</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.feat.wifi">Wi-Fi gratuito in tutta la struttura</span></li>
         </ul>
         <div class="card-footer" style="padding-top:0;">
-          <div class="price"><strong>da 109 €</strong><span>a notte, colazione inclusa</span></div>
-          <a href="#prenota" class="btn btn-primary">Prenota questa camera</a>
+          <div class="price"><strong data-i18n="room.seaview.price">da 109 €</strong><span data-i18n="room.priceNote">a notte, colazione inclusa</span></div>
+          <a href="#prenota" class="btn btn-primary" data-i18n="rooms.bookThisRoom">Prenota questa camera</a>
         </div>
       </div>
     </div>
@@ -168,20 +182,20 @@
 <section class="section" id="terrazza">
   <div class="container">
     <div class="split reveal">
-      <div class="split-media"><span class="card-badge" style="position:absolute;top:16px;left:16px;">La più richiesta</span><span>Foto: Camera con Terrazza</span></div>
+      <div class="split-media"><span class="card-badge" style="position:absolute;top:16px;left:16px;" data-i18n="room.terrace.badge">La più richiesta</span><span data-i18n="rooms.terrace.photoLabel">Foto: Camera con Terrazza</span></div>
       <div>
-        <span class="eyebrow">Camera con Terrazza</span>
-        <h2>La colazione all'alba, qui, è un'altra cosa</h2>
-        <p>Una terrazza privata arredata, affacciata sul Mediterraneo: lo spazio perfetto per un aperitivo al tramonto o un caffè al risveglio.</p>
+        <span class="eyebrow" data-i18n="room.terrace.name">Camera con Terrazza</span>
+        <h2 data-i18n="rooms.terrace.title">La colazione all'alba, qui, è un'altra cosa</h2>
+        <p data-i18n="rooms.terrace.desc">Una terrazza privata arredata, affacciata sul Mediterraneo: lo spazio perfetto per un aperitivo al tramonto o un caffè al risveglio.</p>
         <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 24 m² · fino a 4 persone</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Terrazza privata arredata, vista mare</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Aria condizionata, TV satellitare, frigobar</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Ideale per famiglie e soggiorni lunghi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.terrace.feat1">24 m² · fino a 4 persone</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.terrace.feat2">Terrazza privata arredata, vista mare</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.feat.amenities">Aria condizionata, TV satellitare, frigobar</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.terrace.feat4">Ideale per famiglie e soggiorni lunghi</span></li>
         </ul>
         <div class="card-footer" style="padding-top:0;">
-          <div class="price"><strong>da 139 €</strong><span>a notte, colazione inclusa</span></div>
-          <a href="#prenota" class="btn btn-primary">Prenota questa camera</a>
+          <div class="price"><strong data-i18n="room.terrace.price">da 139 €</strong><span data-i18n="room.priceNote">a notte, colazione inclusa</span></div>
+          <a href="#prenota" class="btn btn-primary" data-i18n="rooms.bookThisRoom">Prenota questa camera</a>
         </div>
       </div>
     </div>
@@ -191,34 +205,34 @@
 <section class="section section--sand" id="famiglia">
   <div class="container">
     <div class="split reveal">
-      <div class="split-media reverse-order" style="background:linear-gradient(135deg,#d8c8a3,#b79f6c);"><span>Foto: Camera Famiglia</span></div>
+      <div class="split-media reverse-order" style="background:linear-gradient(135deg,#d8c8a3,#b79f6c);"><span data-i18n="rooms.family.photoLabel">Foto: Camera Famiglia</span></div>
       <div>
-        <span class="eyebrow">Camera Famiglia</span>
-        <h2>Spazio in più per chi viaggia in gruppo</h2>
-        <p>Due ambienti comunicanti, pensati per famiglie e piccoli gruppi di amici che vogliono restare vicini senza rinunciare allo spazio.</p>
+        <span class="eyebrow" data-i18n="room.family.name">Camera Famiglia</span>
+        <h2 data-i18n="rooms.family.title">Spazio in più per chi viaggia in gruppo</h2>
+        <p data-i18n="rooms.family.desc">Due ambienti comunicanti, pensati per famiglie e piccoli gruppi di amici che vogliono restare vicini senza rinunciare allo spazio.</p>
         <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 32 m² · fino a 5 persone</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Doppio ambiente, due bagni</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Terza e quarta persona gratuite fino a 12 anni*</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Aria condizionata, TV satellitare, frigobar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.family.feat1">32 m² · fino a 5 persone</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.family.feat2">Doppio ambiente, due bagni</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.family.feat3">Terza e quarta persona gratuite fino a 12 anni*</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="rooms.feat.amenities">Aria condizionata, TV satellitare, frigobar</span></li>
         </ul>
         <div class="card-footer" style="padding-top:0;">
-          <div class="price"><strong>da 169 €</strong><span>a notte, colazione inclusa</span></div>
-          <a href="#prenota" class="btn btn-primary">Prenota questa camera</a>
+          <div class="price"><strong data-i18n="room.family.price">da 169 €</strong><span data-i18n="room.priceNote">a notte, colazione inclusa</span></div>
+          <a href="#prenota" class="btn btn-primary" data-i18n="rooms.bookThisRoom">Prenota questa camera</a>
         </div>
       </div>
     </div>
-    <p class="form-note" style="margin-top:16px;">*Consulta i <a href="offerte.html#famiglia" style="text-decoration:underline;">termini del pacchetto famiglia</a>.</p>
+    <p class="form-note" style="margin-top:16px;" data-i18n="rooms.family.note" data-i18n-html>*Consulta i <a href="offerte.html#famiglia" style="text-decoration:underline;">termini del pacchetto famiglia</a>.</p>
   </div>
 </section>
 
 <section class="section--tight">
   <div class="cta-banner reveal">
-    <h2>Non sai quale scegliere?</h2>
-    <p>Scrivici su WhatsApp: vi aiutiamo a trovare la camera giusta per le vostre date in pochi minuti.</p>
+    <h2 data-i18n="rooms.cta.title">Non sai quale scegliere?</h2>
+    <p data-i18n="rooms.cta.lead">Scrivici su WhatsApp: vi aiutiamo a trovare la camera giusta per le vostre date in pochi minuti.</p>
     <div class="cta-banner-actions">
-      <a href="https://wa.me/390789000000" target="_blank" rel="noopener" class="btn btn-dark">Scrivici su WhatsApp</a>
-      <a href="contatti.html" class="btn btn-ghost">Vai ai contatti</a>
+      <a href="https://wa.me/390789000000" target="_blank" rel="noopener" class="btn btn-dark" data-i18n="floating.whatsapp">Scrivici su WhatsApp</a>
+      <a href="contatti.html" class="btn btn-ghost" data-i18n="rooms.cta.contactBtn">Vai ai contatti</a>
     </div>
   </div>
 </section>
@@ -229,45 +243,45 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">Tabby <small>Golfo Aranci</small></a>
-        <p style="max-width:280px;">Via Vasco De Gama, 8 — 07020 Golfo Aranci (OT), Sardegna. A due passi dal mare dal 2003.</p>
+        <p style="max-width:280px;" data-i18n="footer.addressLine">Via Vasco De Gama, 8 — 07020 Golfo Aranci (OT), Sardegna. A due passi dal mare dal 2003.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/hoteltabby/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
           <a href="https://www.facebook.com/hoteltabbygolfoaranci/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
-        <h5>Esplora</h5>
+        <h5 data-i18n="footer.explore">Esplora</h5>
         <ul>
-          <li><a href="camere.html">Camere</a></li>
-          <li><a href="offerte.html">Offerte</a></li>
-          <li><a href="esperienze.html">Esperienze</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="camere.html" data-i18n="nav.rooms">Camere</a></li>
+          <li><a href="offerte.html" data-i18n="nav.offers">Offerte</a></li>
+          <li><a href="esperienze.html" data-i18n="nav.experiences">Esperienze</a></li>
+          <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Informazioni</h5>
+        <h5 data-i18n="footer.info">Informazioni</h5>
         <ul>
-          <li><a href="contatti.html">Come raggiungerci</a></li>
-          <li><a href="offerte.html#best-rate">Miglior tariffa garantita</a></li>
-          <li><a href="contatti.html#faq">Domande frequenti</a></li>
+          <li><a href="contatti.html" data-i18n="footer.howToReach">Come raggiungerci</a></li>
+          <li><a href="offerte.html#best-rate" data-i18n="footer.bestRate">Miglior tariffa garantita</a></li>
+          <li><a href="contatti.html#faq" data-i18n="footer.faq">Domande frequenti</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Contatti</h5>
+        <h5 data-i18n="nav.contact">Contatti</h5>
         <ul>
           <li><a href="tel:+390789000000">+39 0789 000 000</a></li>
           <li><a href="mailto:info@hoteltabby.it">info@hoteltabby.it</a></li>
-          <li><a href="https://wa.me/390789000000" target="_blank" rel="noopener">WhatsApp diretto</a></li>
+          <li><a href="https://wa.me/390789000000" target="_blank" rel="noopener" data-i18n="footer.whatsappDirect">WhatsApp diretto</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-row">
-        <span>© <span id="year"></span> Hotel Tabby — Golfo Aranci, Sardegna. Tutti i diritti riservati.</span>
+        <span>© <span id="year"></span> <span data-i18n="footer.copyright">Hotel Tabby — Golfo Aranci, Sardegna. Tutti i diritti riservati.</span></span>
         <nav class="footer-legal-links" aria-label="Informazioni legali">
-          <a href="privacy.html">Privacy</a>
-          <a href="cookie-policy.html">Cookie</a>
-          <a href="note-legali.html">Note legali</a>
+          <a href="privacy.html" data-i18n="footer.legalPrivacy">Privacy</a>
+          <a href="cookie-policy.html" data-i18n="footer.legalCookie">Cookie</a>
+          <a href="note-legali.html" data-i18n="footer.legalNotice">Note legali</a>
         </nav>
       </div>
     </div>
@@ -275,39 +289,40 @@
 </footer>
 
 <div class="mobile-cta">
-  <a href="tel:+390789000000" class="btn btn-outline"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Chiama</a>
-  <a href="#prenota" class="btn btn-primary">Prenota ora</a>
+  <a href="tel:+390789000000" class="btn btn-outline"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="mobileCta.call">Chiama</span></a>
+  <a href="#prenota" class="btn btn-primary" data-i18n="common.bookNow">Prenota ora</a>
 </div>
 
 <div class="floating-contact">
   <div class="floating-contact-panel">
     <a href="https://wa.me/390789000000" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.13-4.86-4.32-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.21.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
-      Scrivici su WhatsApp
+      <span data-i18n="floating.whatsapp">Scrivici su WhatsApp</span>
     </a>
     <a href="tel:+390789000000">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Chiama la reception
+      <span data-i18n="floating.call">Chiama la reception</span>
     </a>
     <a href="contatti.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Scrivici in 1 minuto
+      <span data-i18n="floating.contact">Scrivici in 1 minuto</span>
     </a>
   </div>
-  <button class="floating-contact-btn" aria-label="Apri i contatti rapidi">
+  <button class="floating-contact-btn" aria-label="Apri i contatti rapidi" data-i18n-aria="floating.aria">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.13-4.86-4.32-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.21.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
   </button>
 </div>
 
 <!-- Cookie / privacy notice -->
 <div class="cookie-notice" id="cookie-notice" role="dialog" aria-label="Informativa cookie">
-  <p>Questo sito non usa cookie di profilazione o di terze parti: solo l'essenziale per farlo funzionare. Maggiori dettagli nella nostra <a href="cookie-policy.html">Cookie Policy</a> e <a href="privacy.html">Informativa Privacy</a>.</p>
+  <p data-i18n="cookie.text" data-i18n-html>Questo sito non usa cookie di profilazione o di terze parti: solo l'essenziale per farlo funzionare. Maggiori dettagli nella nostra <a href="cookie-policy.html">Cookie Policy</a> e <a href="privacy.html">Informativa Privacy</a>.</p>
   <div class="cookie-notice-actions">
-    <button type="button" class="btn btn-primary btn-sm" data-cookie-accept>Ho capito</button>
+    <button type="button" class="btn btn-primary btn-sm" data-cookie-accept data-i18n="cookie.accept">Ho capito</button>
   </div>
 </div>
 
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/i18n.js?v=4"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

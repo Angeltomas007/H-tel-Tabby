@@ -55,12 +55,17 @@
   }
 
   /* Guests dropdown (simple increment/decrement, no external lib) */
+  var guestRenderers = [];
   document.querySelectorAll("[data-guest-control]").forEach(function (wrap) {
     var display = wrap.querySelector("[data-guest-count]");
     var input = wrap.querySelector("input[type=hidden]");
     var count = parseInt((input && input.value) || "2", 10);
     function render() {
-      if (display) display.textContent = count + (count === 1 ? " ospite" : " ospiti");
+      if (display) {
+        display.textContent = window.TabbyI18n
+          ? window.TabbyI18n.guestsLabel(count)
+          : count + (count === 1 ? " ospite" : " ospiti");
+      }
       if (input) input.value = String(count);
     }
     wrap.querySelectorAll("[data-guest-inc]").forEach(function (btn) {
@@ -76,6 +81,12 @@
       });
     });
     render();
+    guestRenderers.push(render);
+  });
+  document.addEventListener("tabby:langchange", function () {
+    guestRenderers.forEach(function (render) {
+      render();
+    });
   });
 
   /* Default + min dates on all booking date inputs (today / tomorrow) */
