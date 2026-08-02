@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Offerte — Hotel Tabby, Golfo Aranci</title>
-<meta name="description" content="Le offerte dell'Hotel Tabby: miglior tariffa garantita, sconto prenota prima, pacchetto famiglia e pacchetto romantico. Prenotare diretto conviene sempre." />
+<title>Note Legali — Hotel Tabby, Golfo Aranci</title>
+<meta name="description" content="Note legali e informazioni societarie dell'Hotel Tabby, condizioni di utilizzo del sito." />
+<meta name="robots" content="noindex" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>" />
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -17,7 +18,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="camere.html">Camere</a></li>
-        <li><a href="offerte.html" class="is-active">Offerte</a></li>
+        <li><a href="offerte.html">Offerte</a></li>
         <li><a href="esperienze.html">Esperienze</a></li>
         <li><a href="contatti.html">Contatti</a></li>
       </ul>
@@ -36,25 +37,6 @@
     </div>
   </div>
 </header>
-
-<div class="sticky-bar">
-  <div class="container sticky-bar-inner">
-    <div class="sticky-bar-info">
-      <strong>Hotel Tabby · Golfo Aranci</strong>
-      <span>Fronte spiaggia, dal 2003 — tariffa migliore garantita in diretta</span>
-    </div>
-    <form class="booking-grid" data-booking-form style="flex:1;max-width:640px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-      <div class="booking-field"><label for="sb-in">Check-in</label><input id="sb-in" type="date" data-checkin required /></div>
-      <div class="booking-field"><label for="sb-out">Check-out</label><input id="sb-out" type="date" data-checkout required /></div>
-      <div class="booking-field" data-guest-control>
-        <label>Ospiti</label>
-        <input type="hidden" value="2" />
-        <span data-guest-count>2 ospiti</span>
-      </div>
-      <button type="submit" class="btn btn-primary booking-submit">Verifica</button>
-    </form>
-  </div>
-</div>
 
 <div class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav-top">
@@ -80,92 +62,47 @@
 <main>
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Offerte</div>
-    <h1>Il vantaggio è di chi prenota diretto</h1>
-    <p class="lead">Niente commissioni per intermediari, niente sorprese: sul nostro sito trovate sempre il prezzo più conveniente, e in più queste offerte pensate per voi.</p>
-  </div>
-</section>
-
-<section class="section" id="best-rate">
-  <div class="container">
-    <div class="split reveal">
-      <div class="split-media"><span>Foto: reception e accoglienza</span></div>
-      <div>
-        <span class="eyebrow">Prenotazione diretta</span>
-        <h2>Miglior tariffa garantita</h2>
-        <p>Se trovate la stessa camera, per le stesse date, a un prezzo più basso su un altro sito, vi rimborsiamo la differenza. È il nostro modo di dire grazie a chi sceglie di prenotare direttamente con noi.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Nessuna commissione nascosta</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Cancellazione gratuita fino a 3 giorni prima dell'arrivo</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Assistenza diretta dalla nostra reception</li>
-        </ul>
-        <a href="camere.html#prenota" class="btn btn-primary">Verifica disponibilità</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--sand">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Offerte in evidenza</span>
-      <h2>Scegliete l'offerta più adatta al vostro viaggio</h2>
-    </div>
-    <div class="grid cols-3 reveal">
-      <article class="card" id="early-booking">
-        <div class="card-media tone-sand"><span class="card-badge">-15%</span><span>Prenota prima</span></div>
-        <div class="card-body">
-          <h3>Prenota prima, risparmia il 15%</h3>
-          <p>Prenotando con almeno 60 giorni di anticipo sulla tariffa flessibile, ottenete subito il 15% di sconto sull'intero soggiorno.</p>
-          <div class="card-footer"><a href="camere.html#prenota" class="btn btn-outline btn-sm">Prenota questa offerta</a></div>
-        </div>
-      </article>
-      <article class="card" id="famiglia">
-        <div class="card-media tone-terracotta"><span>Famiglie</span></div>
-        <div class="card-body">
-          <h3>Pacchetto famiglia</h3>
-          <p>Nelle camere Terrazza e Famiglia, terza e quarta persona soggiornano gratis fino a 12 anni. La Sardegna è più bella condivisa.</p>
-          <div class="card-footer"><a href="camere.html#famiglia" class="btn btn-outline btn-sm">Scopri le camere</a></div>
-        </div>
-      </article>
-      <article class="card" id="romantico">
-        <div class="card-media"><span>Coppie</span></div>
-        <div class="card-body">
-          <h3>Pacchetto romantico</h3>
-          <p>Camera Vista Mare o Terrazza, un aperitivo al tramonto sul bar del Golfo e la colazione servita in camera su richiesta.</p>
-          <div class="card-footer"><a href="camere.html#vista-mare" class="btn btn-outline btn-sm">Scopri le camere</a></div>
-        </div>
-      </article>
-    </div>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Note Legali</div>
+    <h1>Note Legali</h1>
+    <p class="lead">Informazioni societarie e condizioni di utilizzo di questo sito.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="split reveal">
-      <div>
-        <span class="eyebrow">Soggiorni lunghi</span>
-        <h2>Più notti, più risparmio</h2>
-        <p>Per soggiorni di 7 notti o più, applichiamo automaticamente uno sconto sulla tariffa totale. Perfetto per chi vuole vivere Golfo Aranci con calma, senza fretta di ripartire.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 7+ notti: 10% di sconto</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 14+ notti: 15% di sconto</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Navetta aeroporto inclusa dalla seconda settimana</li>
-        </ul>
-        <a href="contatti.html" class="btn btn-outline">Chiedi un preventivo personalizzato</a>
-      </div>
-      <div class="split-media reverse-order" style="background:linear-gradient(135deg,#2e5f73,#0f2530);"><span>Foto: vista dalla terrazza al tramonto</span></div>
-    </div>
-  </div>
-</section>
+    <div class="legal-content reveal">
+      <span class="legal-updated">Ultimo aggiornamento: 2 agosto 2026</span>
 
-<section class="section--tight">
-  <div class="cta-banner reveal">
-    <h2>Le date migliori vanno via in fretta</h2>
-    <p>Bloccate subito il vostro soggiorno: con la prenotazione diretta pagate sempre il prezzo più basso, garantito.</p>
-    <div class="cta-banner-actions">
-      <a href="camere.html#prenota" class="btn btn-dark">Prenota ora</a>
-      <a href="https://wa.me/390789000000" target="_blank" rel="noopener" class="btn btn-ghost">Scrivici su WhatsApp</a>
+      <div class="legal-todo-box">
+        <p><strong>Nota per il gestore del sito:</strong> i campi <span class="legal-todo">DA COMPLETARE</span> vanno sostituiti con i dati camerali reali della società prima della pubblicazione (obbligatori per legge ai sensi dell'art. 2250 Codice Civile e del D.Lgs. 70/2003 sul commercio elettronico).</p>
+      </div>
+
+      <h2>1. Dati identificativi del gestore</h2>
+      <p>
+        <strong>Denominazione:</strong> Hotel Tabby — <span class="legal-todo">DA COMPLETARE: ragione sociale completa</span><br />
+        <strong>Sede legale:</strong> Via Vasco De Gama, 8 — 07020 Golfo Aranci (OT), Sardegna, Italia<br />
+        <strong>Partita IVA:</strong> <span class="legal-todo">DA COMPLETARE</span><br />
+        <strong>Codice Fiscale:</strong> <span class="legal-todo">DA COMPLETARE</span><br />
+        <strong>Numero REA:</strong> <span class="legal-todo">DA COMPLETARE</span><br />
+        <strong>Email:</strong> <a href="mailto:info@hoteltabby.it">info@hoteltabby.it</a><br />
+        <strong>Telefono:</strong> <a href="tel:+390789000000">+39 0789 000 000</a>
+      </p>
+
+      <h2>2. Oggetto del sito</h2>
+      <p>Questo sito ha finalità informativa e promozionale relativa ai servizi di ospitalità offerti dall'Hotel Tabby. Le richieste di prenotazione inviate tramite il sito (modulo di contatto, WhatsApp, telefono) sono richieste di disponibilità: la prenotazione si considera confermata solo dopo conferma esplicita da parte della reception dell'hotel.</p>
+
+      <h2>3. Proprietà intellettuale</h2>
+      <p>Testi, immagini, grafica, loghi e ogni altro contenuto pubblicato su questo sito sono di proprietà dell'Hotel Tabby o dei rispettivi autori/licenzianti, salvo diversa indicazione, e sono protetti dalla normativa vigente in materia di diritto d'autore e proprietà industriale. È vietata la riproduzione, anche parziale, senza autorizzazione scritta.</p>
+
+      <h2>4. Limitazione di responsabilità</h2>
+      <p>L'Hotel Tabby si impegna a mantenere le informazioni pubblicate sul sito accurate e aggiornate, ma non garantisce l'assenza di errori o omissioni. Prezzi, disponibilità e condizioni delle offerte possono variare senza preavviso e vanno sempre confermati al momento della prenotazione effettiva.</p>
+      <p>Il sito può contenere link a siti web di terzi (es. social network, servizi di messaggistica): l'Hotel Tabby non è responsabile dei contenuti o delle pratiche sulla privacy di tali siti esterni.</p>
+
+      <h2>5. Legge applicabile e foro competente</h2>
+      <p>Questo sito e le presenti note legali sono regolati dalla legge italiana. Per qualsiasi controversia relativa all'utilizzo del sito è competente il foro del luogo di residenza o domicilio del consumatore, ove applicabile ai sensi del Codice del Consumo, ovvero il foro di Olbia-Tempio per le controversie tra professionisti.</p>
+
+      <h2>6. Contatti</h2>
+      <p>Per qualsiasi comunicazione relativa a questo sito, potete scrivere a <a href="mailto:info@hoteltabby.it">info@hoteltabby.it</a> o consultare la pagina <a href="contatti.html">Contatti</a>.</p>
     </div>
   </div>
 </section>

@@ -142,4 +142,34 @@
       link.classList.add("is-active");
     }
   });
+
+  /* Cookie / privacy notice banner (informational only — the site sets no
+     profiling or third-party cookies, see cookie-policy.html) */
+  var cookieNotice = document.getElementById("cookie-notice");
+  if (cookieNotice) {
+    var CONSENT_KEY = "tabby-cookie-notice-dismissed";
+    try {
+      if (!localStorage.getItem(CONSENT_KEY)) {
+        setTimeout(function () {
+          cookieNotice.classList.add("is-visible");
+        }, 600);
+      }
+    } catch (e) {
+      /* localStorage unavailable (private mode) — show every visit */
+      setTimeout(function () {
+        cookieNotice.classList.add("is-visible");
+      }, 600);
+    }
+    var acceptBtn = cookieNotice.querySelector("[data-cookie-accept]");
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", function () {
+        cookieNotice.classList.remove("is-visible");
+        try {
+          localStorage.setItem(CONSENT_KEY, "1");
+        } catch (e) {
+          /* ignore */
+        }
+      });
+    }
+  }
 })();

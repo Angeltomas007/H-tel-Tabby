@@ -17,8 +17,8 @@
   --color-white: #ffffff;
   --color-cream: #fffdf8;
 
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --font-body: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --radius-s: 6px;
   --radius-m: 14px;
@@ -1277,6 +1277,30 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.footer-bottom-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-legal-links a:hover {
+  color: var(--color-white);
+}
+
+@media (min-width: 640px) {
+  .footer-bottom-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .footer-social {
   display: flex;
   gap: 10px;
@@ -1316,6 +1340,141 @@ p {
    ========================================================================== */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
+
+/* ==========================================================================
+   Legal pages (privacy / cookie / note legali)
+   ========================================================================== */
+.legal-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2.2em;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content h3 {
+  font-size: 1.1rem;
+  margin-top: 1.6em;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--color-ink-soft);
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 1em;
+  padding-left: 1.3em;
+  list-style: disc;
+}
+
+.legal-content a {
+  color: var(--color-terracotta);
+  text-decoration: underline;
+}
+
+.legal-content strong {
+  color: var(--color-ink);
+}
+
+.legal-updated {
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--color-sand);
+  font-size: 0.78rem;
+  color: var(--color-ink-faint);
+}
+
+.legal-todo {
+  background: #fdf3e7;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-s);
+  padding: 2px 8px;
+  color: var(--color-terracotta-dark);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.legal-todo-box {
+  background: #fdf3e7;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-m);
+  padding: 18px 20px;
+  margin: 1.5em 0;
+}
+
+.legal-todo-box p {
+  color: var(--color-ink);
+  margin: 0;
+}
+
+/* ---------- Cookie / privacy notice banner ---------- */
+.cookie-notice {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 700;
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--color-ink);
+  color: rgba(255, 255, 255, 0.88);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-strong);
+  padding: 18px 20px;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+}
+
+.cookie-notice.is-visible {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookie-notice p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.cookie-notice a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.cookie-notice-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .cookie-notice {
+    flex-direction: row;
+    align-items: center;
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+    max-width: 480px;
+  }
+}
 
 /* ==========================================================================
    Responsive
