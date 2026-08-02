@@ -14,10 +14,20 @@
   document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* Resync header/sticky-bar state on bfcache restore (Safari back/forward
-     navigation keeps stale classes from the scroll position at the time the
-     page was left, without firing a new scroll event). */
-  window.addEventListener("pageshow", onScroll);
+  /* Safari's back/forward cache can resurrect a fully frozen copy of this
+     page — old DOM, old scroll-linked classes, old JS still running from
+     whenever the tab was first opened, even after this file has since been
+     updated on the server. Re-running onScroll() is not enough to fix that
+     (it only fixes symptoms, not stale code), so force a real reload
+     whenever the page is restored from bfcache. This guarantees every tab
+     is always running current code after a single fresh load. */
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) {
+      window.location.reload();
+    } else {
+      onScroll();
+    }
+  });
 
   /* Mobile nav drawer */
   var navToggle = document.querySelector(".nav-toggle");
